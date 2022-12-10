@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SectionTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">?colorTertiary</item>
+    </style>
+
+    <style name="SelectableCardTextMarquee" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/material_on_surface_emphasis_high_type</item>
+    </style>
+
+    <style name="QuantityButton" parent="Widget.Material3.Button.Icon">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="shapeAppearanceOverlay">@style/Rounded50PercentShapeAppearanceOverlay</item>
+    </style>
+</resources>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.core.CoreActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/m3_comp_extended_fab_primary_container_height"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:ignore="PrivateResource">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/breakpoint">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/eggs_boiled_type_material_text_view"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:text="@string/egg_boiled_type"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tip_material_text_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/soft_boiled_material_card_view"
+                    style="@style/SelectableCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/breakpoint"
+                    android:layout_marginLeft="@dimen/breakpoint"
+                    android:layout_marginTop="@dimen/breakpoint"
+                    android:layout_marginEnd="@dimen/breakpoint_half"
+                    android:layout_marginRight="@dimen/breakpoint_half"
+                    android:checkable="true"
+                    app:checkedIcon="@null"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/medium_boiled_material_card_view"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eggs_boiled_type_material_text_view">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/soft_boiled_app_compat_Image_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/breakpoint"
+                            android:layout_marginTop="@dimen/breakpoint"
+                            android:layout_marginEnd="@dimen/breakpoint"
+                            android:src="@drawable/soft_boiled_egg"
+                            app:layout_constraintBottom_toTopOf="@+id/soft_boiled_material_text_view"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/soft_boiled_material_text_view"
+                            style="@style/SelectableCardTextMarquee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/breakpoint"
+                            android:layout_marginTop="@dimen/breakpoint_half"
+                            android:layout_marginEnd="@dimen/breakpoint"
+                            android:layout_marginBottom="@dimen/breakpoint"
+                            android:isSelected="@{true}"
+                            android:text="@string/soft_boiled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/soft_boiled_app_compat_Image_view" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/medium_boiled_material_card_view"
+                    style="@style/SelectableCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/breakpoint_half"
+                    android:layout_marginTop="@dimen/breakpoint"
+                    android:layout_marginEnd="@dimen/breakpoint_half"
+                    android:checkable="true"
+                    app:checkedIcon="@null"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/hard_boiled_material_card_view"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/soft_boiled_material_card_view"
+                    app:layout_constraintTop_toBottomOf="@+id/eggs_boiled_type_material_text_view">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/medium_boiled_app_compat_Image_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/breakpoint"
+                            android:layout_marginTop="@dimen/breakpoint"
+                            android:layout_marginEnd="@dimen/breakpoint"
+                            android:src="@drawable/medium_boiled_egg"
+                            app:layout_constraintBottom_toTopOf="@+id/medium_boiled_material_text_view"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/medium_boiled_material_text_view"
+                            style="@style/SelectableCardTextMarquee"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/breakpoint"
+                            android:layout_marginTop="@dimen/breakpoint_half"
+                            android:layout_marginEnd="@dimen/breakpoint"
+                            android:layout_marginBottom="@dimen/breakpoint"
+                            android:isSelected="@{true}"
+                            android:text="@string/medium_boiled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/medium_boiled_app_compat_Image_view" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/hard_boiled_material_card_view"
+                    style="@style/SelectableCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/breakpoint_half"
+                    android:layout_marginTop="@dimen/breakpoint"
+                    android:layout_marginEnd="@dimen/breakpoint"
+                    android:checkable="true"
+                    app:checkedIcon="@null"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/medium_boiled_material_card_view"
+                    app:layout_constraintTop_toBottomOf="@+id/eggs_boiled_type_material_text_view">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/hard_boiled_app_compat_Image_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/breakpoint"
+                            android:layout_marginTop="@dimen/breakpoint"
+                            android:layout_marginEnd="@dimen/breakpoint"
+                            android:src="@drawable/hard_boiled_egg"
+                            app:layout_constraintBottom_toTopOf="@+id/hard_boiled_material_text_view"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/hard_boiled_material_text_view"
+                            style="@style/SelectableCardTextMarquee"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/breakpoint"
+                            android:layout_marginTop="@dimen/breakpoint_half"
+                            android:layout_marginEnd="@dimen/breakpoint"
+                            android:layout_marginBottom="@dimen/breakpoint"
+                            android:isSelected="@{true}"
+                            android:text="@string/hard_boiled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/hard_boiled_app_compat_Image_view" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/number_of_eggs_material_text_view"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:text="@string/number_of_eggs"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/soft_boiled_material_card_view" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/quantity_material_card_view"
+                    style="@style/Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/number_of_eggs_material_text_view">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/remove_material_button"
+                            style="@style/QuantityButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/breakpoint"
+                            android:layout_marginTop="@dimen/breakpoint"
+                            android:layout_marginEnd="@dimen/breakpoint_half"
+                            android:layout_marginBottom="@dimen/breakpoint"
+                            android:contentDescription="@string/remove_an_egg"
+                            app:icon="@drawable/ic_rounded_remove_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toStartOf="@+id/quantity_material_text_view"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/quantity_material_text_view"
+                            style="@style/TextAppearance.Material3.BodyMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/breakpoint_half"
+                            android:layout_marginTop="@dimen/breakpoint"
+                            android:layout_marginEnd="@dimen/breakpoint_half"
+                            android:layout_marginBottom="@dimen/breakpoint"
+                            android:gravity="center_horizontal"
+                            android:text="@string/x_eggs"
+                            android:textAlignment="center"
+                            android:textColor="@color/material_on_surface_emphasis_high_type"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/add_material_button"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/remove_material_button"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/add_material_button"
+                            style="@style/QuantityButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/breakpoint_half"
+                            android:layout_marginTop="@dimen/breakpoint"
+                            android:layout_marginEnd="@dimen/breakpoint"
+                            android:layout_marginBottom="@dimen/breakpoint"
+                            android:contentDescription="@string/add_an_egg"
+                            app:icon="@drawable/ic_rounded_add_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/quantity_material_text_view"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/size_of_eggs_material_text_view"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:text="@string/size_of_egg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/quantity_material_card_view" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/s_material_card_view"
+                    style="@style/SelectableCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/breakpoint"
+                    android:layout_marginLeft="@dimen/breakpoint"
+                    android:layout_marginTop="@dimen/breakpoint"
+                    android:layout_marginEnd="@dimen/breakpoint_half"
+                    android:layout_marginRight="@dimen/breakpoint_half"
+                    android:checkable="true"
+                    app:checkedIcon="@null"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/m_material_card_view"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/size_of_eggs_material_text_view">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/s_material_text_view"
+                        style="@style/SelectableCardTextMarquee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/breakpoint"
+                        android:isSelected="@{true}"
+                        android:text="@string/s" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/m_material_card_view"
+                    style="@style/SelectableCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/breakpoint_half"
+                    android:layout_marginTop="@dimen/breakpoint"
+                    android:layout_marginEnd="@dimen/breakpoint_half"
+                    android:checkable="true"
+                    app:checkedIcon="@null"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/l_material_card_view"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toEndOf="@+id/s_material_card_view"
+                    app:layout_constraintTop_toBottomOf="@+id/size_of_eggs_material_text_view">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/m_material_text_view"
+                        style="@style/SelectableCardTextMarquee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/breakpoint"
+                        android:isSelected="@{true}"
+                        android:text="@string/m" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/l_material_card_view"
+                    style="@style/SelectableCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/breakpoint_half"
+                    android:layout_marginTop="@dimen/breakpoint"
+                    android:layout_marginEnd="@dimen/breakpoint_half"
+                    android:checkable="true"
+                    app:checkedIcon="@null"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/x_material_card_view"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toEndOf="@+id/m_material_card_view"
+                    app:layout_constraintTop_toBottomOf="@+id/size_of_eggs_material_text_view">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/l_material_text_view"
+                        style="@style/SelectableCardTextMarquee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/breakpoint"
+                        android:isSelected="@{true}"
+                        android:text="@string/l" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/x_material_card_view"
+                    style="@style/SelectableCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/breakpoint_half"
+                    android:layout_marginLeft="@dimen/breakpoint_half"
+                    android:layout_marginTop="@dimen/breakpoint"
+                    android:layout_marginEnd="@dimen/breakpoint"
+                    android:layout_marginRight="@dimen/breakpoint"
+                    android:checkable="true"
+                    app:checkedIcon="@null"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toEndOf="@+id/l_material_card_view"
+                    app:layout_constraintTop_toBottomOf="@+id/size_of_eggs_material_text_view">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/x_material_text_view"
+                        style="@style/SelectableCardTextMarquee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/breakpoint"
+                        android:isSelected="@{true}"
+                        android:text="@string/x" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/temperature_of_eggs_material_text_view"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:text="@string/temperature_of_egg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/s_material_card_view" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/temperature_material_switch"
+                    style="@style/TextAppearance.Material3.BodyMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:checked="true"
+                    android:text="@string/tip_refrigeration_temperatures_singular"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/temperature_of_eggs_material_text_view"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="snap|scroll|enterAlways"
+                app:title="@string/app_name"
+                app:titleTextColor="?colorOnSurface" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_fade_bottom"
+            android:gravity="center_horizontal"
+            app:layout_anchor="@id/nested_scroll_view"
+            app:layout_anchorGravity="bottom">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/start_extended_floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/breakpoint"
+                android:lines="1"
+                android:text="@string/cook_for_x_minutes"
+                android:textColor="?colorOnPrimary"
+                app:backgroundTint="?colorPrimary"
+                app:shapeAppearanceOverlay="@style/Rounded25PercentShapeAppearanceOverlay" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

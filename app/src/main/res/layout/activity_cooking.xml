@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.cooking.CookingActivity">
+
+    <data>
+
+        <variable
+            name="cookingViewModel"
+            type="seifemadhamdy.eggity.ui.cooking.CookingViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/m3_comp_extended_fab_primary_container_height"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toTopOf="@+id/stop_material_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_name_material_text_view"
+            tools:ignore="PrivateResource">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/breakpoint">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/time_until_ready_material_text_view"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:text="@string/time_until_ready"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/countdown_material_card_view"
+                    style="@style/Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="16dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/time_until_ready_material_text_view"
+                    app:shapeAppearanceOverlay="@style/Rounded25PercentShapeAppearanceOverlay">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/countdown_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="@dimen/breakpoint"
+                        android:textColor="@color/material_on_surface_emphasis_high_type"
+                        app:autoSizeTextType="uniform"
+                        app:elapsedTime="@{cookingViewModel.elapsedCookingTime}" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/boiled_tip_material_text_view"
+                    style="@style/SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:text="@string/boiled_tip"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/countdown_material_card_view" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/boiled_tip_description_material_text_view"
+                    style="@style/TextAppearance.Material3.BodyMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/breakpoint"
+                    android:text="@string/boiled_tip_description_singular"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boiled_tip_material_text_view"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="snap|scroll|enterAlways"
+                app:title="@string/app_name"
+                app:titleTextColor="?colorOnSurface" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_fade_bottom"
+            android:gravity="center_horizontal"
+            app:layout_anchor="@id/nested_scroll_view"
+            app:layout_anchorGravity="bottom">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/cancel_extended_floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/breakpoint"
+                android:lines="1"
+                android:text="@string/cancel"
+                android:textColor="?colorOnPrimary"
+                app:backgroundTint="?colorPrimary"
+                app:shapeAppearanceOverlay="@style/Rounded25PercentShapeAppearanceOverlay" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

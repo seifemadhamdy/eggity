@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Eggity</string>
+    <string name="egg_boiled_type">Egg Boiled Type</string>
+    <string name="eggs_boiled_type">Eggs Boiled Type</string>
+    <string name="soft_boiled">Soft-Boiled</string>
+    <string name="medium_boiled">Medium-Boiled</string>
+    <string name="hard_boiled">Hard-Boiled</string>
+    <string name="number_of_eggs">Number of Eggs</string>
+    <string name="remove_an_egg">Remove an egg</string>
+    <string name="one_egg">1 Egg</string>
+    <string name="x_eggs">%1$d Eggs</string>
+    <string name="add_an_egg">Add an Egg</string>
+    <string name="size_of_egg">Size of Egg</string>
+    <string name="size_of_eggs">Size of Eggs</string>
+    <string name="s">S</string>
+    <string name="m">M</string>
+    <string name="l">L</string>
+    <string name="x">X</string>
+    <string name="temperature_of_egg">Temperature of Egg</string>
+    <string name="temperature_of_eggs">Temperature of Eggs</string>
+    <string name="tip_room_temperature_singular">The egg is stored at room temperature</string>
+    <string name="tip_room_temperature">The eggs are stored at room temperature</string>
+    <string name="tip_refrigeration_temperatures_singular">The egg is stored at refrigeration temperatures</string>
+    <string name="tip_refrigeration_temperatures">The eggs are stored at refrigeration temperatures</string>
+    <string name="boiled_tip">Boiled Tip</string>
+    <string name="boiled_tip_description_singular">Bring water to a rolling boil. Once the water is boiling, add the egg and adjust the temperature to maintain a rolling boil. Prepare an ice bath. When the timer goes off, remove the egg from the pot and immediately place it into an ice bath for at least ten minutes before peeling.</string>
+    <string name="boiled_tip_description">Bring water to a rolling boil. Once the water is boiling, add the eggs and adjust the temperature to maintain a rolling boil. Prepare an ice bath. When the timer goes off, remove eggs from the pot and immediately place them into an ice bath for at least ten minutes before peeling.</string>
+    <string name="egg_ready">Your egg is ready</string>
+    <string name="eggs_ready">Your eggs are ready</string>
+    <string name="egg_notification_channel_id" translatable="false">eggity_time_channel</string>
+    <string name="egg_notification_channel_name" translatable="true">Eggity Time</string>
+    <string name="bon_appetit">Bon appétit!</string>
+    <string name="finish">Finish</string>
+    <string name="time_until_ready">Time Until Ready</string>
+    <string name="cook_for_x_minutes">Cook for %1$s minutes</string>
+    <string name="cancel">Cancel</string>
+</resources>

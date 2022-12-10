@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Rounded25PercentShapeAppearanceOverlay">
+        <item name="cornerSize">25%</item>
+    </style>
+
+    <style name="Rounded50PercentShapeAppearanceOverlay">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="SectionTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">?colorTertiary</item>
+    </style>
+
+    <style name="SelectableCardTextMarquee" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/material_on_surface_emphasis_high_type</item>
+    </style>
+
+    <style name="QuantityButton" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="shapeAppearanceOverlay">@style/Rounded50PercentShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="SelectableCard" parent="Widget.Material3.CardView.Outlined">
+        <item name="shapeAppearanceOverlay">@style/Rounded25PercentShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="Card" parent="Widget.Material3.CardView.Filled">
+        <item name="shapeAppearanceOverlay">@style/Rounded25PercentShapeAppearanceOverlay</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="field_drab">#6F5523</color>
+    <color name="cafe_noir">#422C00</color>
+    <color name="dark_goldenrod">#B88F40</color>
+    <color name="golden_brown">#856211</color>
+    <color name="russet">#854A25</color>
+    <color name="seal_brown">#542100</color>
+    <color name="raw_sienna">#DA7D43</color>
+    <color name="windsor_tan">#A45017</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
